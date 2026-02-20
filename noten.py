@@ -9,21 +9,14 @@ noten = {
     "mathe": 5, "englisch": 4, "programmieren": 2, "statistik": 6
 }
 
-
-
-summe = 0
-
 for i in range(3):
-    schlechtestes_fach = ""
-    schlechteste_note = 6
+    bestes_fach = ""
+    beste_note = 0
 
     for fach in noten:
-        if noten[fach] < schlechteste_note:
-            schlechteste_note = noten[fach]
-            schlechtestes_fach = fach
+        if noten[fach] > beste_note:
+            beste_note = noten[fach]
+            bestes_fach = fach
 
-    summe += schlechteste_note
-    del noten[schlechtestes_fach]
-
-durchschnitt = summe / 3
-print("Durchschnitt der 3 schlechtesten:", durchschnitt)
+    print(bestes_fach, beste_note)
+    del noten[bestes_fach]
