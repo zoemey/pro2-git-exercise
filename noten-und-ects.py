@@ -4,20 +4,6 @@ from ausgabe import faecher_ausgeben, schnitt_ausgeben
 
 faecher = []  # Liste von Dicts: {"name": str, "note": float, "ects": int}
 
-
-def gewichteter_schnitt(liste):
-    if not liste:
-        return None
-
-    summe_gewichtet = sum(f["note"] * f["ects"] for f in liste)
-    summe_ects = sum(f["ects"] for f in liste)
-
-    if summe_ects == 0:
-        return None
-
-    return summe_gewichtet / summe_ects
-
-
 while True:
     print("\n--- Notenverwaltung ---")
     print("1: Fächer mit zugehörigen Noten eingeben")
