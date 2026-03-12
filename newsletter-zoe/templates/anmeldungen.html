@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h1>Anmeldungen</h1>
+        <table border="1">
+            <tr>
+                <td><b>Name</b></td>
+                <td><b>E-Mail</b></td>
+                <td><b>Geburtsjahr</b></td>
+
+            </tr>
+            {% for a in anmeldungen %}
+            <tr>
+                <td>{{a.name}}</td>
+                <td>{{a.email}}</td>
+                <td>{{a.geburtsjahr}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

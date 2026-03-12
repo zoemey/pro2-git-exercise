@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <h1>Newsletter</h1>
+        <form action="{{ url_for('anmelden') }}" method="post">
+            Name: <input type="name", name="name"/>
+            E-Mail: <input type="email", name="email"/>
+            Geburtsjahr: <input type="geburtsjahr", name="geburtsjahr"/>
+            <input type="submit", value="Anmelden">
+        </form>
+    </body>
+</html>
